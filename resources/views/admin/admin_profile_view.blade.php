@@ -30,7 +30,7 @@
 
                 <div class="box-body text-center pb-50">
                     <a href="#">
-                        <img class="avatar avatar-xxl avatar-bordered" src="{{ (!empty($adminData->profile_photo_path)) ? url('upload/admin_images'.$adminData->profile_photo_path) : url('upload/no_image.jpg') }}" alt="">
+                        <img class="avatar avatar-xxl avatar-bordered" src="{{ (!empty($adminData->profile_photo_path)) ? url('upload/admin_images/'.$adminData->profile_photo_path) : url('upload/no_image.jpg') }}" alt="">
                     </a>
                     <h4 class="mt-2 mb-0"><a class="hover-primary text-white" href="#">Admin Name: {{ $adminData->name }}</a></h4>
                     <h4 class="mt-2 mb-0"><a class="hover-primary text-white" href="#">Admin Email: {{ $adminData->email }}</a></h4>
