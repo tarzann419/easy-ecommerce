@@ -4,6 +4,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Backend\AdminProfileController;
 
@@ -63,4 +64,10 @@ Route::controller(IndexController::class)->prefix('user')->group(function(){
     Route::get('/change-password', 'ChangePassword')->name('change.password');
     Route::post('/change-update-password', 'ChangeUpdatePassword')->name('change.password.store');
 
+});
+
+
+Route::controller(GoogleController::class)->group(function(){
+    Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
+    Route::get('auth/google/callback', 'handleGoogleCallback');
 });

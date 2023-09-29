@@ -25,6 +25,13 @@
                     <div class="social-sign-in outer-top-xs">
                         <a href="#" class="facebook-sign-in"><i class="fa fa-facebook"></i> Sign In with Facebook</a>
                         <a href="#" class="twitter-sign-in"><i class="fa fa-twitter"></i> Sign In with Twitter</a>
+
+                        <div class="flex items-center justify-end mt-4 align-middle ">
+                            <a href="{{ route('auth.google') }}">
+                                <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png" style="margin-left: 3em;">
+                            </a>
+                        </div>
+
                     </div>
                     <form method="POST" action="{{ isset($guard) ? url($guard.'/login') : route('login') }}">
                         @csrf <div class="form-group">
@@ -51,7 +58,7 @@
                     <h4 class="checkout-subtitle">Create a new account</h4>
                     <p class="text title-tag-line">Create your new account.</p>
                     <form method="POST" action="{{ route('register') }}">
-                        @csrf               
+                        @csrf
                         <div class="form-group">
                             <label class="info-title" for="exampleInputEmail1">Name <span>*</span></label>
                             <input type="text" class="form-control unicase-form-control text-input" id="name" name="name">
@@ -60,7 +67,7 @@
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                            @enderror 
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="exampleInputEmail2">Email Address <span>*</span></label>
@@ -69,7 +76,7 @@
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                            @enderror 
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="exampleInputEmail1">Phone Number <span>*</span></label>
@@ -78,7 +85,7 @@
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                            @enderror 
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="exampleInputEmail1">Password <span>*</span></label>
@@ -87,7 +94,7 @@
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                            @enderror 
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label class="info-title" for="exampleInputEmail1">Confirm Password <span>*</span></label>
@@ -96,7 +103,7 @@
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
-                            @enderror 
+                            @enderror
                         </div>
                         <button type="submit" class="btn-upper btn btn-primary checkout-page-button">Sign Up</button>
                     </form>
