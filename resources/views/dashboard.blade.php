@@ -1,9 +1,7 @@
 @extends('frontend.main_master')
 @section('content')
 
-@php
 
-@endphp
 
 <div class="body-content">
     <div class="container">
