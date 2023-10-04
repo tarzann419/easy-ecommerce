@@ -76,4 +76,5 @@ Route::controller(GoogleController::class)->group(function(){
 
 Route::controller(BrandController::class)->prefix('brand')->group(function(){
     Route::get('/view', 'AllBrand')->name('all.brand');
+    Route::get('/store', 'StoreBrand')->name('brand.store');
 });

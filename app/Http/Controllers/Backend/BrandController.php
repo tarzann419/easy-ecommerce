@@ -12,4 +12,10 @@ class BrandController extends Controller
         $brands = Brand::latest()->get();
         return view('admin.brand.brand_view', compact('brands'));
     }
+
+    // public function StoreBrand(Request $request){
+    //     Brand::insert([
+    //         'brand_name_en' => 
+    //     ])
+    // }
 }
