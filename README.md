@@ -1,6 +1,6 @@
 <!-- active sidebar link -->
 
-@php 
+<!-- @php 
 
 $prefix = Request::route()->getPrefix();
 $route = Route::current()->getName();
@@ -22,7 +22,16 @@ $route = Route::current()->getName();
             <a href="{{ route('all.brand') }}"><i class="ti-more"></i>All Brands</a>
         </li>
     </ul>
-</li>
+</li> -->
 
 
 <!-- active sidebar link -->
+
+
+<!--  -image intertvention->
+
+
+<!-- https://image.intervention.io/v2/introduction/installation -->
+
+
+<!-- end image intervention -->
