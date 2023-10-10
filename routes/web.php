@@ -76,5 +76,8 @@ Route::controller(GoogleController::class)->group(function(){
 
 Route::controller(BrandController::class)->prefix('brand')->group(function(){
     Route::get('/view', 'AllBrand')->name('all.brand');
-    Route::get('/store', 'StoreBrand')->name('brand.store');
+    Route::post('/store', 'StoreBrand')->name('brand.store');
+    Route::get('/edit/{id}', 'EditBrandPage')->name('edit.brand');
+    Route::post('/update', 'UpdateBrand')->name('brand.update');
+    Route::get('/delete/{id}', 'DeleteBrand')->name('brand.delete');
 });
